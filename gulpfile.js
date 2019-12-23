@@ -23,21 +23,21 @@ const paths = {
     dest: "./dist"
   },
   styles: {
-    main: "./src/assets/styles/main.scss",
+    main: "./src/assets/styles/styles.scss",
     src: "./src/assets/styles/**/*.scss",
     dest: "./dist/assets/styles"
   },
   scripts: {
     src: "./src/assets/scripts/*.js",
-    dest: "./dist/assets/scripts/"
+    dest: "./dist/assets/scripts"
   },
   fonts: {
     src: "./src/assets/fonts/**/*.*",
-    dest: "./dist/assets/fonts/"
+    dest: "./dist/assets/fonts"
   },
   img: {
     src: "./src/assets/img/**/*.*",
-    dest: "./dist/assets/img/"
+    dest: "./dist/assets/img"
   }
 };
 
@@ -91,7 +91,7 @@ function scripts() {
 
 //копирование шрифтов
 function fonts() {
-  return gulp.src(paths.fonts.src).pipe(gulp.dest(path.fonts.dest));
+  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dest));
 }
 
 //оптимизация картинок
@@ -107,7 +107,7 @@ function images() {
       //     use: [pngquant()]
       //   })
       // )
-      .pipe(gulp.dest(path.img.dest))
+      .pipe(gulp.dest(paths.img.dest))
   );
 }
 
