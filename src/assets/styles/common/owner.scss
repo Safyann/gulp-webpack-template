@@ -1,0 +1,50 @@
+.owner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.owner__photo {
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.owner__img {
+    max-width: 100%;
+    display: block;
+}
+
+.owner__title {
+    @include roboto(500);
+    font-size: 35px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+
+    @include phones {
+        font-size: 21px;
+    }
+
+    &--intro {
+        margin-top: 10px;
+        font-size: 28px;
+
+        @include phones {
+            margin-top: 18px;
+        }
+    }
+}
+
+.owner__description {
+    opacity: 0.8;
+    @include roboto(400);
+    text-align: center;
+
+    @include phones {
+        margin-top: 3px;
+        font-size: 14px;
+    }
+}

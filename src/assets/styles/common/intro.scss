@@ -1,0 +1,94 @@
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.intro__welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.intro__group {
+    background-color: rgba(252,252,252,0.85);
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.intro__btn-auth {
+    display: inline-block;
+    font-family: roboto,Verdana,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: $white;
+    padding: 10px 30px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 5px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $white;
+        color: $marine;
+    }
+
+    @include desktop {
+        right: 5.5%;
+    }
+
+    @include phones {
+        right: default;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 7px 15px;
+    }
+}
+
+.intro__copyright {
+    @include roboto(300);
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: $white;
+    opacity: 0.7;
+    text-align: center;
+    width: 100%;
+
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include phones {
+        bottom: 2%;
+    }
+}
+
+.active {
+    .intro__btn-auth {
+        display: none;
+    }
+}

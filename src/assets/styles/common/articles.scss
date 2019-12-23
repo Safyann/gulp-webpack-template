@@ -1,0 +1,82 @@
+.articles {
+    grid-area: articles;
+    display: flex;
+    padding-bottom: 150px;
+
+    @include tablets {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 234px;
+    }
+
+    @include phones {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-bottom: 264px;
+    }
+}
+
+.articles__list {
+    margin-top: 62px;
+    width: 87.5%;
+
+    @include tablets {
+        width: 100%;
+        margin-top: 43px;
+    }
+
+    @include phones {
+        margin-top: 27px;
+    }
+}
+
+.articles__item {
+    margin-bottom: 67px;
+    border-bottom: 5px solid rgba(55,62,66,0.07);
+
+    &:last-child {
+        margin: 0;
+        border: none;
+    }
+
+    @include tablets {
+        margin-bottom: 40px;
+    }
+
+    @include phones {
+        margin-bottom: 25px;
+        border-bottom: 4px solid rgba(55, 62, 66, 0.07);
+    }
+
+}
+
+.articles__date {
+    margin-bottom: 20px;
+    color: $marine;
+    opacity: 0.7;
+
+    @include tablets {
+        margin-bottom: 10px;
+    }
+}
+
+.articles__text {
+    margin-bottom: 67px;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 25px;
+    }
+
+    & p {
+        line-height: 26px;
+
+        @include tablets {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}

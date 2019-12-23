@@ -1,0 +1,89 @@
+.blog__sidebar {
+    grid-area: sidebar;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+
+    &::after {
+        @include tablets {
+            pointer-events: all;
+            content: "";
+            @include circle (40px, $dark-marine);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateX(40%);
+            box-shadow: 4px 0 10px rgba(0, 0, 0, .2);
+            cursor: pointer;
+        }
+    }
+
+    @include tablets {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 50%;
+        height: 100%;
+        margin-right: 0;
+        background: $dark-marine;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, .2);
+    }
+
+    &_opened {
+        transform: translateX(0);
+    }
+}
+
+.blog__sidebar.fixed {
+    position: fixed;
+    width: 34%;
+
+    @include tablets {
+        top: 0;
+        left: 0;
+        width: 50%;
+    }
+
+    @include phones {
+        width: 80%;
+    }
+
+    @include desktop {
+        width: 25%;
+    }
+}
+
+.blog__list {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 50px;
+    width: 75%;
+}
+
+.blog__item {
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    transition: all 0.5s;
+    @include tablets {
+        color: $white;
+    }
+}
+
+.active{
+    &.blog__item {
+    @include roboto(600);
+    color: $marine;
+    border-right: 3px solid $marine;
+
+    @include tablets {
+        color: $black;
+        border-right: 3px solid $black;
+    }
+    }
+}
+
+.blog__item:hover {
+    color: $marine;
+}

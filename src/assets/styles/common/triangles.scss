@@ -1,0 +1,45 @@
+.triangles {
+    width: 100%;
+    grid-area: hero;
+    z-index: 10;
+    align-self: end;
+    margin-bottom: -2px;
+}
+
+.triangles--about {
+    .triangle__left {
+        fill: #efeee9;
+    }
+
+    .triangle__right {
+        fill: #eeebdf;
+
+        @include tablets {
+            fill: #efeee9;
+        }
+    }
+}
+
+.triangles--blog {
+    grid-area: heroBlog;
+    
+    .triangle__left {
+        fill: $white;
+    }
+
+    .triangle__right {
+        fill: $white;
+    }
+}
+
+.triangles--works {
+    grid-area: hero;
+    
+    .triangle__left {
+        fill: #faf8f0;
+    }
+
+    .triangle__right {
+        fill: #faf8f0;
+    }
+}
